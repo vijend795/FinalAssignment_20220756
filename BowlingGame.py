@@ -19,7 +19,9 @@ class BowlingGame:
                 rollIndex +=2
             else:
                 result += self.frameScore(rollIndex)
-            rollIndex +=2
+                #error- 3 
+                # updated value of roll index is out of if statement range, set rollIndex value update inside the if statement 
+                rollIndex +=2
             return result
 
     def isStrike(self, rollIndex):

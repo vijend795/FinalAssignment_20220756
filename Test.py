@@ -15,13 +15,16 @@ class TestBowlingGame(unittest.TestCase):
             # TypeError:rolls is a array storing all roll . its cant be called as method . to fix this we need to make following changes
             # call method roll 
             self.game.roll(0)
+            print(self.game.roll(0))
             #error-2
             #AttributeError arise score method called that StrikeScore attribute not defined , 
             # to fix this error we need to correct spelling mistake of method 'stickeScore' and change that method name to strikeScore in Bowling Game code            
             # error- 3
             # AssertionError: test Fail as the result value has to be 0 
             # in all 20 attempt, player score 0 in every attempt so final result has to be 0 but its not and result fails 
-        assert self.game.score()==0
+            # to compare actual score and assert  score ,change method to self.assertEqual instead of assert method
+            # AssertionError: result value is 10 but expected value is 10 . now we have to find error in main code but first complete all test 
+        self.assertEqual(self.game.score(),0)
     def testAllOnes(self):
         self.rollMany(1, 20)
         assert self.game.score()==20
