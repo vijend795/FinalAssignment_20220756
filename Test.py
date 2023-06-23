@@ -10,7 +10,13 @@ class TestBowlingGame(unittest.TestCase):
 
     def testGutterGame(self):
         for i in range(0, 20):
-            self.game.rolls(0)
+            #error-1
+            # self.game.rolls(0)
+            # rolls is a array storing all roll . its cant be called as method . to fix this we need to make following changes
+            # call method roll 
+            self.game.roll(0)
+            
+
         assert self.game.score()==0
     def testAllOnes(self):
         self.rollMany(1, 20)
