@@ -12,10 +12,12 @@ class TestBowlingGame(unittest.TestCase):
         for i in range(0, 20):
             #error-1
             # self.game.rolls(0)
-            # rolls is a array storing all roll . its cant be called as method . to fix this we need to make following changes
+            # TypeError:rolls is a array storing all roll . its cant be called as method . to fix this we need to make following changes
             # call method roll 
             self.game.roll(0)
-            
+            #error-2
+            #AttributeError arise score method called that StrikeScore attribute not defined , 
+            # to fix this error we need to correct spelling mistake of method 'stickeScore' and change that method name to strikeScore in Bowling Game code            
 
         assert self.game.score()==0
     def testAllOnes(self):

@@ -26,7 +26,11 @@ class BowlingGame:
         return self.rolls[rollIndex] == 10
     def isSpare(self, rollIndex):
         return self.rolls[rollIndex]+ self.rolls[rollIndex+1]==10
-    def stickeScore(self,rollIndex):
+    
+    #error-2
+    #AttributeError arise score method called that StrikeScore attribute not defined , 
+    #error in method name so correct spelling to "StrikeScore" instead of "stickeScore"
+    def StrikeScore(self,rollIndex):
         return  10+ self.rolls[rollIndex+1]+ self.rolls[rollIndex+2]
 
     def spareScore(self,rollIndex):
