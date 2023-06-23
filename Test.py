@@ -27,7 +27,11 @@ class TestBowlingGame(unittest.TestCase):
         self.assertEqual(self.game.score(),0)
     def testAllOnes(self):
         self.rollMany(1, 20)
-        assert self.game.score()==20
+        # Error-5:
+        # AssertionError: test Fail as the result value has to be 20  
+        # to compare actual score and assert  score ,change method to self.assertEqual instead of assert method
+        # AssertionError: result value is 12 but expected value is 20 . now we have to find error in main code but first complete all test 
+        self.assertEqual( self.game.score(),20)
     def testOneSpare(self):
         self.game.rolls(5)
         self.game.rolls(5)
@@ -48,4 +52,6 @@ class TestBowlingGame(unittest.TestCase):
         assert self.game.score()==150
     def rollMany(self, pins,rolls):
         for i in range(rolls):
-            self.game.rolls(pins)
+            # Error-4: 
+            # TypeError: instead if method array is called , rectify error called roll method instead of rolls array
+            self.game.roll(pins)
