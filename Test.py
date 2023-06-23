@@ -18,7 +18,9 @@ class TestBowlingGame(unittest.TestCase):
             #error-2
             #AttributeError arise score method called that StrikeScore attribute not defined , 
             # to fix this error we need to correct spelling mistake of method 'stickeScore' and change that method name to strikeScore in Bowling Game code            
-
+            # error- 3
+            # AssertionError: test Fail as the result value has to be 0 
+            # in all 20 attempt, player score 0 in every attempt so final result has to be 0 but its not and result fails 
         assert self.game.score()==0
     def testAllOnes(self):
         self.rollMany(1, 20)
