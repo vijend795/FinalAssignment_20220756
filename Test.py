@@ -39,9 +39,15 @@ class TestBowlingGame(unittest.TestCase):
         self.rollMany(0,17)
         assert self.game.score()==16
     def testOneStrike(self):
-        self.game.rolls(10)
-        self.game.rolls(4)
-        self.game.rolls(3)
+        # self.game.rolls(10)
+        # self.game.rolls(4)
+        # self.game.rolls(3)
+        # Error-6
+        # TypeError:rolls is a array storing all roll . its cant be called as method . to fix this we need to make following changes
+        # call method roll 
+        self.game.roll(10)
+        self.game.roll(4)
+        self.game.roll(3)
         self.rollMany(0,16)
         assert  self.game.score()==24
     def testPerfectGame(self):
