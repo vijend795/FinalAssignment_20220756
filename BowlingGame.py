@@ -44,7 +44,9 @@ class BowlingGame:
         result = 0
         rollIndex=0
         for frameIndex in range(10):
-            if frameIndex in range(10):
+            # Refactoring-1
+            # if frameIndex in range(10):
+            if self.isStrike(rollIndex):
                 result += self.StrikeScore(rollIndex)
                 rollIndex +=1
             elif self.isSpare(rollIndex):
@@ -55,7 +57,10 @@ class BowlingGame:
                 #error- 3 
                 # updated value of roll index is out of if statement range, set rollIndex value update inside the if statement 
                 rollIndex +=2
-            return result
+            # Refactoring-2
+            # return result
+            # return statement has to be outside the for loop
+        return result
 
     def isStrike(self, rollIndex):
         '''
