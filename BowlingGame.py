@@ -47,7 +47,10 @@ class BowlingGame:
             # Refactoring-1
             # if frameIndex in range(10):
             if self.isStrike(rollIndex):
-                result += self.StrikeScore(rollIndex)
+                # Refactoring-3
+                # result += self.StrikeScore(rollIndex)
+                # syntax corrected method name start with small letter 
+                result += self.strikeScore(rollIndex)
                 rollIndex +=1
             elif self.isSpare(rollIndex):
                 result += self.spareScore(rollIndex)
@@ -88,7 +91,10 @@ class BowlingGame:
     #error-2
     #AttributeError arise score method called that StrikeScore attribute not defined , 
     #error in method name so correct spelling to "StrikeScore" instead of "stickeScore"
-    def StrikeScore(self,rollIndex):
+    # Refactoring-3
+    # def StrikeScore(self,rollIndex):
+    # syntax corrected method name start with small letter
+    def strikeScore(self,rollIndex):    
         '''
         this function run of player score strike and add bonus point for next two balls to actual result which is 10
 
