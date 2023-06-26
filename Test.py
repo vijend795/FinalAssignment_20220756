@@ -65,7 +65,12 @@ class TestBowlingGame(unittest.TestCase):
         self.assertEqual( self.game.score(),300)
     def testOneSpare(self):
         self.rollMany(5,21)
-        assert self.game.score()==150
+        # assert self.game.score()==150
+        # Error-9:
+        # AssertionError: test Fail as the result value has to be 150  
+        # to compare actual score and assert  score ,change method to self.assertEqual instead of assert method
+        # AssertionError: result value is 20 but expected value is 150 . now we have to find error in main code but first complete all test 
+        self.assertEqual( self.game.score(),150)
     def rollMany(self, pins,rolls):
         for i in range(rolls):
             # Error-4: 
