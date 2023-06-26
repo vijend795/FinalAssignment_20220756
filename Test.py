@@ -33,11 +33,17 @@ class TestBowlingGame(unittest.TestCase):
         # AssertionError: result value is 12 but expected value is 20 . now we have to find error in main code but first complete all test 
         self.assertEqual( self.game.score(),20)
     def testOneSpare(self):
-        self.game.rolls(5)
-        self.game.rolls(5)
-        self.game.rolls(3)
+        # self.game.rolls(5)
+        # self.game.rolls(5)
+        # self.game.rolls(3)
+        # Error-10
+        # TypeError:rolls is a array storing all roll . its cant be called as method . to fix this we need to make following changes
+        # call method roll 
+        self.game.roll(5)
+        self.game.roll(5)
+        self.game.roll(3)
         self.rollMany(0,17)
-        assert self.game.score()==16
+        assert self.game.score()==16      
     def testOneStrike(self):
         # self.game.rolls(10)
         # self.game.rolls(4)
