@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module BowlingGame</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">BowlingGame</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:a%3A%5Ccollegework%5Csofwtare%20testing%20and%20maintennace%5Cassignment%203%5Cfinalassignment_20220756%5Cfinalassignment_20220756%5Cbowlinggame.py">a:\collegework\sofwtare testing and maintennace\assignment 3\finalassignment_20220756\finalassignment_20220756\bowlinggame.py</a></td></tr></table>
+    <p><span class="code">#This&nbsp;file&nbsp;has&nbsp;information&nbsp;about&nbsp;Bowling&nbsp;Game&nbsp;for&nbsp;which&nbsp;the&nbsp;description&nbsp;is&nbsp;provided&nbsp;in&nbsp;project&nbsp;assessment.</span></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="BowlingGame.html#BowlingGame">BowlingGame</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="BowlingGame">class <strong>BowlingGame</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor"><span class="code">&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="BowlingGame-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">this&nbsp;function&nbsp;will&nbsp;run&nbsp;while&nbsp;initializing&nbsp;the&nbsp;code&nbsp;and&nbsp;will&nbsp;create&nbsp;a&nbsp;empty&nbsp;list&nbsp;variable&nbsp;to&nbsp;store&nbsp;all&nbsp;roll&nbsp;data&nbsp;<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+None&nbsp;<br>
+&nbsp;<br>
+Return:<br>
+None</span></dd></dl>
+
+<dl><dt><a name="BowlingGame-frameScore"><strong>frameScore</strong></a>(self, rollIndex)</dt><dd><span class="code">this&nbsp;function&nbsp;run&nbsp;when&nbsp;player&nbsp;is&nbsp;score&nbsp;total&nbsp;pins&nbsp;less&nbsp;than&nbsp;10&nbsp;in&nbsp;first&nbsp;and&nbsp;2nd&nbsp;ball<br>
+&nbsp;<br>
+Args:<br>
+rollIndex(int):&nbsp;index&nbsp;of&nbsp;first&nbsp;roll&nbsp;as&nbsp;the&nbsp;first&nbsp;argument&nbsp;between&nbsp;0&nbsp;to&nbsp;11<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;int:&nbsp;adding&nbsp;pins&nbsp;for&nbsp;1st&nbsp;ball&nbsp;and&nbsp;2nd&nbsp;ball</span></dd></dl>
+
+<dl><dt><a name="BowlingGame-isSpare"><strong>isSpare</strong></a>(self, rollIndex)</dt><dd><span class="code">this&nbsp;function&nbsp;is&nbsp;check&nbsp;that&nbsp;if&nbsp;player&nbsp;score&nbsp;10&nbsp;in&nbsp;two&nbsp;continues&nbsp;balls&nbsp;<br>
+&nbsp;<br>
+Args:<br>
+rollIndex(int):&nbsp;the&nbsp;first&nbsp;argument&nbsp;between&nbsp;0&nbsp;to&nbsp;11<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;return&nbsp;as&nbsp;bool:&nbsp;true&nbsp;or&nbsp;false&nbsp;,is&nbsp;checking&nbsp;sum&nbsp;of&nbsp;two&nbsp;continues&nbsp;index&nbsp;value&nbsp;in&nbsp;rolls&nbsp;list&nbsp;is&nbsp;10&nbsp;or&nbsp;not</span></dd></dl>
+
+<dl><dt><a name="BowlingGame-isStrike"><strong>isStrike</strong></a>(self, rollIndex)</dt><dd><span class="code">this&nbsp;function&nbsp;is&nbsp;check&nbsp;that&nbsp;if&nbsp;player&nbsp;score&nbsp;10&nbsp;in&nbsp;first&nbsp;balls&nbsp;<br>
+&nbsp;<br>
+Args:<br>
+rollIndex(int):&nbsp;the&nbsp;first&nbsp;argument&nbsp;between&nbsp;0&nbsp;to&nbsp;11<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;return&nbsp;as&nbsp;bool:&nbsp;true&nbsp;or&nbsp;false,is&nbsp;checking&nbsp;index&nbsp;value&nbsp;of&nbsp;rolls&nbsp;list&nbsp;is&nbsp;10&nbsp;or&nbsp;not</span></dd></dl>
+
+<dl><dt><a name="BowlingGame-roll"><strong>roll</strong></a>(self, pins)</dt><dd><span class="code">this&nbsp;function&nbsp;will&nbsp;append&nbsp;pins&nbsp;data&nbsp;to&nbsp;rolls&nbsp;list<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+Arg(int):&nbsp;will&nbsp;append&nbsp;all&nbsp;result&nbsp;value&nbsp;from&nbsp;0&nbsp;to&nbsp;10&nbsp;<br>
+&nbsp;<br>
+Return:<br>
+None</span></dd></dl>
+
+<dl><dt><a name="BowlingGame-score"><strong>score</strong></a>(self)</dt><dd><span class="code">this&nbsp;function&nbsp;start&nbsp;the&nbsp;game&nbsp;with&nbsp;result&nbsp;and&nbsp;rollIndex&nbsp;value&nbsp;10.<br>
+total&nbsp;no&nbsp;of&nbsp;roll&nbsp;one&nbsp;player&nbsp;can&nbsp;ball&nbsp;is&nbsp;10<br>
+this&nbsp;main&nbsp;function&nbsp;&nbsp;will&nbsp;provide&nbsp;the&nbsp;score&nbsp;according&nbsp;to&nbsp;score&nbsp;pin&nbsp;value&nbsp;,&nbsp;<br>
+if&nbsp;score&nbsp;is&nbsp;strike&nbsp;(10)then&nbsp;provide&nbsp;one&nbsp;extra&nbsp;strike&nbsp;and&nbsp;bonus&nbsp;point&nbsp;in&nbsp;next&nbsp;two&nbsp;balls<br>
+if&nbsp;score&nbsp;is&nbsp;Spare&nbsp;(10&nbsp;in&nbsp;two&nbsp;balls&nbsp;)&nbsp;then&nbsp;bonus&nbsp;point&nbsp;awarded&nbsp;in&nbsp;next&nbsp;one&nbsp;balls<br>
+and&nbsp;then&nbsp;add&nbsp;score&nbsp;in&nbsp;rolls&nbsp;list<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+&nbsp;<br>
+Return&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;final&nbsp;actual&nbsp;result&nbsp;value&nbsp;as&nbsp;int&nbsp;between&nbsp;0&nbsp;&nbsp;to&nbsp;301</span></dd></dl>
+
+<dl><dt><a name="BowlingGame-spareScore"><strong>spareScore</strong></a>(self, rollIndex)</dt><dd><span class="code">this&nbsp;function&nbsp;run&nbsp;of&nbsp;player&nbsp;score&nbsp;spare&nbsp;(&nbsp;sum&nbsp;of&nbsp;pins&nbsp;on&nbsp;first&nbsp;ball&nbsp;and&nbsp;2nd&nbsp;ball&nbsp;is&nbsp;10&nbsp;)&nbsp;and&nbsp;<br>
+add&nbsp;bonus&nbsp;point&nbsp;for&nbsp;next&nbsp;balls&nbsp;(3rd&nbsp;Ball)&nbsp;to&nbsp;actual&nbsp;result&nbsp;which&nbsp;is&nbsp;10<br>
+&nbsp;<br>
+Args:<br>
+rollIndex(int):&nbsp;index&nbsp;of&nbsp;roll&nbsp;for&nbsp;spare&nbsp;as&nbsp;the&nbsp;first&nbsp;argument&nbsp;between&nbsp;0&nbsp;to&nbsp;11<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;int:adding&nbsp;bonus&nbsp;points&nbsp;on&nbsp;3rd&nbsp;balls&nbsp;as&nbsp;pins&nbsp;scored&nbsp;after&nbsp;scoring&nbsp;10&nbsp;in&nbsp;first&nbsp;and&nbsp;2nd&nbsp;ball</span></dd></dl>
+
+<dl><dt><a name="BowlingGame-strikeScore"><strong>strikeScore</strong></a>(self, rollIndex)</dt><dd><span class="code">this&nbsp;function&nbsp;run&nbsp;of&nbsp;player&nbsp;score&nbsp;strike&nbsp;and&nbsp;add&nbsp;bonus&nbsp;point&nbsp;for&nbsp;next&nbsp;two&nbsp;balls&nbsp;to&nbsp;actual&nbsp;result&nbsp;which&nbsp;is&nbsp;10<br>
+&nbsp;<br>
+Args:<br>
+rollIndex(int):&nbsp;index&nbsp;of&nbsp;roll&nbsp;for&nbsp;strike&nbsp;as&nbsp;the&nbsp;first&nbsp;argument&nbsp;between&nbsp;0&nbsp;to&nbsp;11<br>
+&nbsp;<br>
+Return:<br>
+&nbsp;int&nbsp;:adding&nbsp;bonus&nbsp;points&nbsp;as&nbsp;pins&nbsp;scored&nbsp;in&nbsp;next&nbsp;two&nbsp;balls&nbsp;after&nbsp;scoring&nbsp;10&nbsp;in&nbsp;first&nbsp;ball</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
