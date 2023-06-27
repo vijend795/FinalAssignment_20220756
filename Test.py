@@ -8,6 +8,7 @@ class TestBowlingGame(unittest.TestCase):
     def setUp(self):
         self.game = BowlingGame.BowlingGame()
 
+   
     def testGutterGame(self):
         for i in range(0, 20):
             #error-1
@@ -86,3 +87,23 @@ class TestBowlingGame(unittest.TestCase):
             # Error-4: 
             # TypeError: instead if method array is called , rectify error called roll method instead of rolls array
             self.game.roll(pins)
+    
+    def testRollInvalidPins(self):
+        # boundary value testing 
+        # roll for -1 for all 20 balls
+        self.rollMany(-1,10)
+        self.rollMany(11,10)
+        # for invalid value result wil be 0
+        self.assertEqual(self.game.score(),0)
+
+    def testRollInvalidCharacter(self):
+        # roll for character other then int
+        self.rollMany('a',5)
+        
+        # float value will be converted to int 
+        self.rollMany(2.0,5)
+        self.rollMany(4.6,10)
+        # for invalid value convert into integer and for invalid character result will be 0 
+        self.assertEqual(self.game.score(),50)
+
+        

@@ -24,7 +24,15 @@ class BowlingGame:
         Return:
         None
         '''
-        self.rolls.append(pins)
+
+        # refactoring 5: check for other character , float 
+        # refactoring 4: pins will take value between 0  and 11 
+        if not isinstance(pins,(int,float)) or pins<0 or pins>10:
+            # raise ValueError("Invalid pin value. Pins should be between 0 and 10.")
+            # for invalid value pins will be 0
+            self.rolls.append(0)
+        else:
+            self.rolls.append(int(pins))
 
     def score(self):
         '''
